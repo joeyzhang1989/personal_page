@@ -33,11 +33,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # 4. Build and export Next.js static site
+      # 4. Build Next.js site for static export
       - name: Build Next.js site
-        run: |
-          NODE_ENV=production npm run build
-          npx next export
+        run: NODE_ENV=production npm run build
 
       # 5. Setup Pages
       - name: Setup Pages
