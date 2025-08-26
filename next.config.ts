@@ -1,10 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
+const repo = 'personal_page'; // <-- your GitHub repo name
 
-  // Ensure this matches your repository name exactly
-  basePath: process.env.NODE_ENV === 'production' ? '/personal_page' : '',
+const isProd = process.env.NODE_ENV === 'production';
+
+const nextConfig = {
+  basePath: isProd ? `/${repo}` : '',
+  assetPrefix: isProd ? `/${repo}/` : '',
+  trailingSlash: true,
 };
 
-// Use module.exports for .js configuration files
-module.exports = nextConfig;
+export default nextConfig;
