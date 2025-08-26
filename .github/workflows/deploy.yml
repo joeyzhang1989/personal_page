@@ -41,9 +41,8 @@ jobs:
 
       # 4. Builds the Next.js application for static export
       - name: Build Next.js site
-        run: |
-          npm run build
-          npm run export
+        run: npm run build
+  
       # 5. Configures GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
