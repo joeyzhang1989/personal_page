@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const repo = 'personal_page'; // <-- your GitHub repo name
+const repo = 'personal_page'; 
 
 const isProd = process.env.NODE_ENV === 'production';
 
